@@ -9,7 +9,7 @@ class Program
 {
     private static ClamClient CLAM_CLIENT;
     private static readonly string MALWARE_SAMPLES_PATH = @"E:\Projects\Clones\Malwares";
-    private static readonly string QUARANTINE_PATH = @"E:\Projects\Clones\Knitrix Console Antivirus\Knitrix.Antivirus.Console\bin\Debug\Quarantine";
+    private static readonly string QUARANTINE_PATH = "Quarantine";
     private static long FILE_COUNT = 0;
     private static long CLEAN_FILES = 0;
     private static long INFECTED_FILES = 0;
@@ -143,9 +143,7 @@ class Program
             case ClamScanResults.VirusDetected:
                 Console.WriteLine("Virus Found!");
                 Console.WriteLine("Virus name: {0}", scanResult.InfectedFiles.First().VirusName);
-                string quarantinedFile = Path.Combine(QUARANTINE_PATH, Path.GetFileName(fileToScan));
-                if (!File.Exists(quarantinedFile))
-                    File.Copy(fileToScan, quarantinedFile);
+                QuarantineContainer(fileToScan);
                 INFECTED_FILES++;
                 break;
             case ClamScanResults.Error:
@@ -200,5 +198,25 @@ class Program
             timeConsumed = string.Format("{0:##.##}", milliSeconds / 1000) + " Seconds";
 
         return timeConsumed;
+    }
+
+    public static void QuarantineContainer(string scannedFile)
+    {
+        try
+        {
+            string quarantineFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, QUARANTINE_PATH);
+
+            if (!Directory.Exists(quarantineFolder))
+                Directory.CreateDirectory(quarantineFolder);
+
+            string quarantinedFile = Path.Combine(quarantineFolder, Path.GetFileName(scannedFile));
+
+            if (!File.Exists(quarantinedFile))
+                File.Copy(scannedFile, quarantinedFile);
+        }
+        catch (Exception ex)
+        {
+
+        }
     }
 }
