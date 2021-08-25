@@ -132,7 +132,6 @@ class Program
 
     private static void ScanFile(string fileToScan)
     {
-        Thread.Sleep(100);
         var scanResult = CLAM_CLIENT.ScanFileOnServerAsync(fileToScan).Result;
         switch (scanResult.Result)
         {
