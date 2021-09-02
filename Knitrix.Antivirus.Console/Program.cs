@@ -8,7 +8,7 @@ using System.Threading;
 class Program
 {
     private static ClamClient CLAM_CLIENT;
-    private static readonly string MALWARE_SAMPLES_PATH = @"E:\Projects\Clones\Malwares";
+    private static readonly string MALWARE_SAMPLES_PATH = @"E:\Antivirus\malware-sample-library-master";
     private static readonly string QUARANTINE_PATH = "Quarantine";
     private static long FILE_COUNT = 0;
     private static long CLEAN_FILES = 0;
