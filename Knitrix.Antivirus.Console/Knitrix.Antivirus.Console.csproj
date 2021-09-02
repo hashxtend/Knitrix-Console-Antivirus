@@ -43,8 +43,8 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nClam, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\nClam.6.0.1\lib\netstandard2.0\nClam.dll</HintPath>
+    <Reference Include="nClam, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\nClam.5.0.0\lib\netstandard2.0\nClam.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -3,7 +3,6 @@ using System.Linq;
 using nClam;
 using System.IO;
 using System.Diagnostics;
-using System.Threading;
 
 class Program
 {
