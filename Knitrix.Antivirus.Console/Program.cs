@@ -16,7 +16,7 @@ class Program
     private static long ERROR_FILES = 0;
     private static long TOTAL_SCAN_SIZE = 0;
 
-    static void Main(string[] args)
+    static void Main()
     {
         Console.Title = "Viroxware Antivirus";
 
