@@ -215,3 +215,8 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 .vs/
+/packages/nClam.6.0.1
+/packages/nClam.4.0.0
+/packages/nClam.5.0.0
+/packages/nClam.5.0.0
+/packages/nClam.5.0.0

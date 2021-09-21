@@ -7,7 +7,7 @@ using System.Diagnostics;
 class Program
 {
     private static ClamClient CLAM_CLIENT;
-    private static readonly string MALWARE_SAMPLES_PATH = @"E:\Projects\Clones\Malwares";
+    private static readonly string MALWARE_SAMPLES_PATH = @"E:\Antivirus\malware-sample-library-master";
     private static readonly string QUARANTINE_PATH = "Quarantine";
     private static long FILE_COUNT = 0;
     private static long CLEAN_FILES = 0;
@@ -15,7 +15,7 @@ class Program
     private static long ERROR_FILES = 0;
     private static long TOTAL_SCAN_SIZE = 0;
 
-    static void Main(string[] args)
+    static void Main()
     {
         Console.Title = "Knitrix.Antivirus.Console";
 
