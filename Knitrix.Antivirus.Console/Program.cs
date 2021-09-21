@@ -3,7 +3,6 @@ using System.Linq;
 using nClam;
 using System.IO;
 using System.Diagnostics;
-using System.Threading;
 
 class Program
 {
@@ -18,7 +17,7 @@ class Program
 
     static void Main(string[] args)
     {
-        Console.Title = "Viroxware Antivirus";
+        Console.Title = "Knitrix.Antivirus.Console";
 
         CLAM_CLIENT = new ClamClient("localhost", 3310);
         var pingResult = CLAM_CLIENT.PingAsync().Result;
